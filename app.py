@@ -23,7 +23,6 @@ def get_chroma_connection():
     return db
 
 
-
 st.title("This is my basic RAG app")
 
 # Initialize session state
@@ -77,15 +76,8 @@ if uploaded_files and not st.session_state["database_created"]:
 #         st.markdown("---")
 
 # Input for new query
-query_text = st.text_input("Ask a new question!", placeholder="Enter your question here...")
+query_text = st.chat_input("Ask a question!")
 
 # Dynamically create a button for the query
-execute_query_button = st.button("Execute Query")
-if execute_query_button:
-    if query_text.strip():
-        
+if query_text:
         execute_query(query_text)
-
-
-        # Dynamically create a new button below the query result
-        # st.button(f"Show responses for: {query_text}")
