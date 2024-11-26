@@ -9,14 +9,16 @@ Follow the installation instructions for your operating system.
 
 
 2. Pull Required Models with:
+
 ollama pull mxbai-embed-large
+
 ollama pull llama2
 
-3. Verify the models are available:
+4. Verify the models are available:
 ollama list
 (Ensure mxbai-embed-large (for embeddings) and llama2 (for query generation) appear in the list)
 
-4. Start the Ollama Service Locally on localhost:11434:
+5. Start the Ollama Service Locally on localhost:11434:
 ollama serve
 
 
